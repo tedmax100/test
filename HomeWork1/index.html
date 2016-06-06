@@ -1,0 +1,48 @@
+<html>
+
+  <head>
+    <base href="/">
+    <title>CV人生</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    
+    <link rel="stylesheet" href="assets/stylesheets/bootstrap.css"></style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="assets/stylesheets/styles.css">
+    <style>
+        body { padding: 5px; }
+    </style>
+    <!-- 1. Load libraries -->
+    <script src="assets/js/jquery-2.2.3.js"></script>
+    <script src="node_modules/bootbox/bootbox.min.js"></script>
+    <script src="node_modules/underscore/underscore.js"></script>
+    <script src="node_modules/es6-shim/es6-shim.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/typescript/lib/typescript.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.dev.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script>
+      System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/boot')
+            .then(null, console.error.bind(console));
+    </script>
+
+  </head>
+
+  <!-- 3. Display the application -->
+  <body>
+    <my-app>Loading...</my-app>
+  </body>
+
+</html>
